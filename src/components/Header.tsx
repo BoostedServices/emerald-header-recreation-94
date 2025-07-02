@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { User } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -60,7 +61,7 @@ const Header = () => {
               data-animate="scale-in"
               data-delay="200"
             >
-              <img src="/lovable-uploads/9adeff6f-a289-44db-bb22-7b540ba1b6be.png" alt="Logo" className="h-12 w-auto" />
+              <img src="/EchoContent/logo.png" alt="Logo" className="h-12 w-auto" />
             </div>
 
             {/* Right Side Icons */}

@@ -9,21 +9,21 @@ const GameSelection = () => {
       id: 'fortnite',
       name: 'FN',
       title: 'FORTNITE',
-      image: '/EchoUploads/d0be5c60-254d-40fb-8be7-c9f3e3632ecf.png',
+      image: '/EchoContent/Fortnite (1).png',
       category: 'FN'
     },
     {
       id: 'valorant',
       name: 'Valorant',
       title: 'VALORANT',
-      image: '/EchoUploads/ec2693d2-062d-4b5b-88be-a70f59bf6528.png',
+      image: '/EchoContent/Val.png',
       category: 'VALORANT'
     },
     {
       id: 'hwid',
       name: 'HWID Spoofer',
       title: 'HWID SPOOFER',
-      image: '/EchoUploads/fdfcd970-e650-49bc-b619-84837c5ad8f6.png',
+      image: '/EchoContent/Temp (1).png',
       category: 'SPOOFER'
     }
   ];

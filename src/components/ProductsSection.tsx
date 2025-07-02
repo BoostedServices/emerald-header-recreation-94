@@ -8,35 +8,35 @@ const ProductsSection = () => {
       name: 'Echo Valorant Full',
       price: '$4.99',
       stock: 13,
-      image: '/EchoUploads/20e50704-5145-4161-8e66-06219d53effa.png'
+      image: '/EchoContent/EchoValFull.png'
     },
     {
       id: 'ultimate',
       name: 'Echo Ultimate',
       price: '$7.99',
       stock: 60,
-      image: '/EchoUploads/771af544-6100-401f-a0ca-cef9313f9b22.png'
+      image: '/EchoContent/EchoUltimate.png'
     },
     {
       id: 'unreal',
       name: 'Echo Unreal',
       price: '$4.99',
       stock: 70,
-      image: '/EchoUploads/29651d57-006b-40d3-8caa-7e889141958b.png'
+      image: '/EchoContent/EchoUnreal.png'
     },
     {
       id: 'temp-spoofer',
       name: 'Echo Temp Spoofer',
       price: '$2.99',
       stock: 28,
-      image: '/EchoUploads/e361b6c2-7afd-4b48-8183-c06ae7610f22.png'
+      image: '/EchoContent/EchoTemp.png'
     },
     {
       id: 'perm-spoofer',
       name: 'Echo Perm Spoofer',
       price: '$19.99',
       stock: null,
-      image: '/EchoUploads/340a12e3-a8ad-455c-866f-ec49f380b073.png'
+      image: '/EchoContent/EchoPerm.png'
     }
   ];
 

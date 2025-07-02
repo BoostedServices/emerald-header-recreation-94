@@ -13,7 +13,7 @@ const BundlesSection = () => {
       discount: 35,
       items: 2,
       stock: 50,
-      image: '/EchoUploads/29651d57-006b-40d3-8caa-7e889141958b.png'
+      image: '/EchoContent/EchoUnreal.png'
     },
     {
       id: 'champion-bundle',
@@ -23,7 +23,7 @@ const BundlesSection = () => {
       discount: 25,
       items: 2,
       stock: 30,
-      image: '/EchoUploads/771af544-6100-401f-a0ca-cef9313f9b22.png'
+      image: '/EchoContent/EchoUltimate.png'
     },
     {
       id: 'diamond-bundle',
@@ -33,7 +33,7 @@ const BundlesSection = () => {
       discount: 20,
       items: 2,
       stock: 25,
-      image: '/EchoUploads/340a12e3-a8ad-455c-866f-ec49f380b073.png'
+      image: '/EchoContent/EchoPerm.png'
     }
   ];
 
@@ -47,7 +47,7 @@ const BundlesSection = () => {
             price: '$69.99',
             originalPrice: '$0.00',
             duration: 'Lifetime License (Unlimited hours)',
-            image: '/EchoUploads/29651d57-006b-40d3-8caa-7e889141958b.png'
+            image: '/EchoContent/EchoUnreal.png'
           },
           {
             name: 'Lifetime License (Unlimited hours)',
@@ -55,7 +55,7 @@ const BundlesSection = () => {
             price: '$34.99',
             originalPrice: '$0.00',
             duration: 'Lifetime License (Unlimited hours)',
-            image: '/EchoUploads/e361b6c2-7afd-4b48-8183-c06ae7610f22.png'
+            image: '/EchoContent/EchoTemp.png'
           }
         ];
       case 'diamond-bundle':
@@ -66,7 +66,7 @@ const BundlesSection = () => {
             price: '$14.99',
             originalPrice: '$0.00',
             duration: '1 Week License (168 hours)',
-            image: '/EchoUploads/20e50704-5145-4161-8e66-06219d53effa.png'
+            image: '/EchoContent/EchoValFull.png'
           },
           {
             name: 'One Time Usage (48 hours)',
@@ -74,7 +74,7 @@ const BundlesSection = () => {
             price: '$19.99',
             originalPrice: '$0.00',
             duration: 'One Time Usage (48 hours)',
-            image: '/EchoUploads/340a12e3-a8ad-455c-866f-ec49f380b073.png'
+            image: '/EchoContent/EchoPerm.png'
           }
         ];
       case 'champion-bundle':
@@ -85,7 +85,7 @@ const BundlesSection = () => {
             price: '$34.99',
             originalPrice: '$0.00',
             duration: 'Lifetime usage (Unlimited hours)',
-            image: '/EchoUploads/340a12e3-a8ad-455c-866f-ec49f380b073.png'
+            image: '/EchoContent/EchoPerm.png'
           },
           {
             name: '1 Month License (730 hours)',
@@ -93,7 +93,7 @@ const BundlesSection = () => {
             price: '$33.99',
             originalPrice: '$0.00',
             duration: '1 Month License (730 hours)',
-            image: '/EchoUploads/20e50704-5145-4161-8e66-06219d53effa.png'
+            image: '/EchoContent/EchoValFull.png'
           }
         ];
       default:

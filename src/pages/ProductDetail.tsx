@@ -26,7 +26,7 @@ const ProductDetail = () => {
       rating: 5,
       description: 'Advanced Valorant cheat with multiple bypass options',
       features: ['🔒 3 Different bypass\'s built into our software you can choose from!', '🔓 Unlock every item in the game.', '💻 Supports Windows 10-11', '⚡ Simple 5 minutes setup', '⭐ Private is undetected by vanguard', '🔧 HVCI on/off'],
-      images: ['/EchoUploads/20e50704-5145-4161-8e66-06219d53effa.png', '/EchoUploads/20e50704-5145-4161-8e66-06219d53effa.png', '/EchoUploads/20e50704-5145-4161-8e66-06219d53effa.png'],
+      images: ['/EchoContent/EchoValFull.png', '/EchoContent/EchoValFull.png', '/EchoContent/EchoValFull.png'],
       variants: [{
         name: '1 Day License (24 hrs)',
         stock: 1,
@@ -61,7 +61,7 @@ const ProductDetail = () => {
       rating: 5,
       description: 'Ultimate gaming experience with advanced features',
       features: ['🎯 Advanced aimbot with smooth targeting', '🔍 ESP/Wallhack with customizable visuals', '💻 Supports Windows 10-11', '⚡ Quick 3 minutes setup', '🛡️ Undetected by anti-cheat systems', '🎮 Multiple game mode support'],
-      images: ['/EchoUploads/771af544-6100-401f-a0ca-cef9313f9b22.png', '/EchoUploads/771af544-6100-401f-a0ca-cef9313f9b22.png', '/EchoUploads/771af544-6100-401f-a0ca-cef9313f9b22.png'],
+      images: ['/EchoContent/EchoUltimate.png', '/EchoContent/EchoUltimate.png', '/EchoContent/EchoUltimate.png'],
       variants: [{
         name: '1 Day License (24 hrs)',
         stock: 5,
@@ -96,7 +96,7 @@ const ProductDetail = () => {
       rating: 5,
       description: 'Unreal gaming enhancement with cutting-edge technology',
       features: ['🎮 Enhanced game mechanics', '🔧 Real-time modifications', '💻 Windows 10-11 compatible', '⚡ Easy 2 minutes installation', '🔒 Secure and private', '⭐ Regular updates included'],
-      images: ['/EchoUploads/29651d57-006b-40d3-8caa-7e889141958b.png', '/EchoUploads/29651d57-006b-40d3-8caa-7e889141958b.png', '/EchoUploads/29651d57-006b-40d3-8caa-7e889141958b.png'],
+      images: ['/EchoContent/EchoUnreal.png', '/EchoContent/EchoUnreal.png', '/EchoContent/EchoUnreal.png'],
       variants: [{
         name: '1 Day License (24 hrs)',
         stock: 8,
@@ -139,7 +139,7 @@ const ProductDetail = () => {
       rating: 5,
       description: 'Temporary hardware ID spoofing solution',
       features: ['🔄 Temporary HWID spoofing', '⏱️ Session-based protection', '💻 Windows 10-11 support', '⚡ Instant activation', '🔒 Safe and reversible', '🛠️ Easy to use interface'],
-      images: ['/EchoUploads/e361b6c2-7afd-4b48-8183-c06ae7610f22.png', '/EchoUploads/e361b6c2-7afd-4b48-8183-c06ae7610f22.png', '/EchoUploads/e361b6c2-7afd-4b48-8183-c06ae7610f22.png'],
+      images: ['/EchoContent/EchoTemp.png', '/EchoContent/EchoTemp.png', '/EchoContent/EchoTemp.png'],
       variants: [{
         name: '1 Day License (24 hours)',
         stock: 9,
@@ -170,7 +170,7 @@ const ProductDetail = () => {
       rating: 5,
       description: 'Permanent hardware ID spoofing solution',
       features: ['🔒 Permanent HWID spoofing', '🛡️ Advanced protection methods', '💻 Windows 10-11 compatible', '⚡ One-time setup', '🔧 Multiple spoofing options', '📞 24/7 support included'],
-      images: ['/EchoUploads/340a12e3-a8ad-455c-866f-ec49f380b073.png', '/EchoUploads/340a12e3-a8ad-455c-866f-ec49f380b073.png', '/EchoUploads/340a12e3-a8ad-455c-866f-ec49f380b073.png'],
+      images: ['/EchoContent/EchoPerm.png', '/EchoContent/EchoPerm.png', '/EchoContent/EchoPerm.png'],
       variants: [{
         name: 'One Time Usage (48 hours)',
         stock: 0,

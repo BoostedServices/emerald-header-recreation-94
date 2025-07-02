@@ -4,8 +4,9 @@ import { ArrowLeft, Star, Eye, ShoppingCart, Plus, Minus, ChevronDown } from 'lu
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
 import { usePageAnimation } from '../hooks/usePageAnimation';
+import { useCart } from '../contexts/CartContext';
+import { toastAddToCart } from '../components/CustomToast';
 
 const ProductDetail = () => {
   usePageAnimation();
@@ -14,9 +15,9 @@ const ProductDetail = () => {
   const [selectedVariant, setSelectedVariant] = useState(0);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [couponCode, setCouponCode] = useState('');
   const [bottomSelectedVariant, setBottomSelectedVariant] = useState(0);
   const [isBottomDropdownOpen, setIsBottomDropdownOpen] = useState(false);
+  const { addItem } = useCart();
 
   // Mock product data - in a real app this would come from an API
   const products = {
@@ -220,6 +221,26 @@ const ProductDetail = () => {
     });
   }
 
+  const handleAddToCart = () => {
+    addItem({
+      id: `${product.name}-${currentVariant.name}`,
+      name: `${product.name} - ${currentVariant.name}`,
+      price: currentVariant.price,
+      image: product.images[0]
+    });
+    toastAddToCart(`${product.name} - ${currentVariant.name}`);
+  };
+
+  const handleBottomAddToCart = () => {
+    addItem({
+      id: `${product.name}-${bottomCurrentVariant.name}`,
+      name: `${product.name} - ${bottomCurrentVariant.name}`,
+      price: bottomCurrentVariant.price,
+      image: product.images[0]
+    });
+    toastAddToCart(`${product.name} - ${bottomCurrentVariant.name}`);
+  };
+
   return (
     <div className="min-h-screen bg-[#121212]">
       <Header />
@@ -359,7 +380,7 @@ const ProductDetail = () => {
             {/* Variants */}
             <div className="space-y-3">
               <h3 className="text-white font-semibold">Variants:</h3>
-              <div className="space-y-2">
+              <div className="space-y-2 max-h-60 overflow-y-auto">
                 {product.variants.map((variant, index) => (
                   <div 
                     key={index} 
@@ -384,27 +405,20 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            {/* Coupon */}
-            <div className="space-y-2">
-              <label className="text-gray-400 text-sm">Coupon:</label>
-              <Input 
-                placeholder="Enter Coupon Code" 
-                value={couponCode} 
-                onChange={(e) => setCouponCode(e.target.value)} 
-                className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-500" 
-              />
-            </div>
-
             {/* Action Buttons */}
             <div 
               className="space-y-3"
               data-animate="fade-in-up"
               data-delay="800"
             >
-              <Button className="w-full bg-[#08C422] hover:bg-[#07A91E] text-white text-lg py-6">
+              <Button 
+                onClick={handleAddToCart}
+                className="w-full bg-[#08C422] hover:bg-[#07A91E] text-white text-lg py-6"
+              >
                 ✓ Checkout
               </Button>
               <Button 
+                onClick={handleAddToCart}
                 variant="outline" 
                 className="w-full border-gray-600 text-gray-400 hover:bg-gray-700 hover:text-white bg-transparent text-lg py-6"
               >
@@ -473,7 +487,10 @@ const ProductDetail = () => {
                 )}
               </div>
               
-              <Button className="bg-[#08C422] hover:bg-[#07A91E] text-white px-8 py-2">
+              <Button 
+                onClick={handleBottomAddToCart}
+                className="bg-[#08C422] hover:bg-[#07A91E] text-white px-8 py-2"
+              >
                 Add to cart
               </Button>
             </div>
@@ -505,11 +522,7 @@ const ProductDetail = () => {
                   
                   <p className="text-gray-500 text-xs mt-4">{bundle.note}</p>
                   
-                  <div className="flex items-center justify-between mt-4">
-                    <Input 
-                      placeholder="Enter Coupon Code" 
-                      className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-500 mr-4" 
-                    />
+                  <div className="flex items-center justify-end mt-4">
                     <Button className="bg-[#08C422] hover:bg-[#07A91E] text-white whitespace-nowrap">
                       Add To Cart
                     </Button>

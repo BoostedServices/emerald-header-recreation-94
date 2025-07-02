@@ -390,8 +390,6 @@ const ProductDetail = () => {
                         ? 'border-[#08C422] bg-[#08C422] bg-opacity-10' 
                         : 'border-gray-600 hover:border-gray-500'
                     }`}
-                    data-animate="scale-in"
-                    data-delay={600 + (index * 50)}
                   >
                     <div className="flex justify-between items-center">
                       <div>

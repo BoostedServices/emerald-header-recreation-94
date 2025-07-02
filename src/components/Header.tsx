@@ -14,7 +14,7 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Products', path: '/products' },
     { name: 'Status', path: '/status' },
-    { name: 'Discord', path: 'discord.gg/echowtf', external: true }
+    { name: 'Discord', path: 'https://discord.gg/echowtf', external: true }
   ];
   
   return (

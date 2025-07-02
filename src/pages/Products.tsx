@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -80,7 +81,7 @@ const Products = () => {
       price: '$19.99',
       originalPrice: null,
       discount: null,
-      stock: null,
+      stock: 0,
       image: '/EchoContent/EchoPerm.png',
       category: 'SPOOFER',
       priceValue: 19.99,
@@ -229,14 +230,14 @@ const Products = () => {
     // Apply availability filters
     if (selectedFilters.length > 0) {
       filtered = filtered.filter(product => {
-        const inStock = product.stock !== null && product.stock > 0;
-        const outOfStock = product.stock === null || product.stock === 0;
+        const isInStock = product.stock > 0;
+        const isOutOfStock = product.stock === 0;
         
-        return selectedFilters.some(filter => {
-          if (filter === 'In stock') return inStock;
-          if (filter === 'Out of stock') return outOfStock;
-          return false;
-        });
+        // If filters are selected, show products that match at least one filter
+        if (selectedFilters.includes('In stock') && isInStock) return true;
+        if (selectedFilters.includes('Out of stock') && isOutOfStock) return true;
+        
+        return false;
       });
     }
 
@@ -278,6 +279,10 @@ const Products = () => {
     }
   };
 
+  // Calculate actual counts for filters
+  const inStockCount = products.filter(p => p.stock > 0).length;
+  const outOfStockCount = products.filter(p => p.stock === 0).length;
+
   return (
     <div className="min-h-screen bg-[#121212]">
       <Header />
@@ -309,7 +314,7 @@ const Products = () => {
                   className="border-gray-400 data-[state=checked]:bg-[#08C422] data-[state=checked]:border-[#08C422]"
                 />
                 <label htmlFor="in-stock" className="text-white text-sm cursor-pointer">
-                  In stock (7)
+                  In stock ({inStockCount})
                 </label>
               </div>
               <div className="flex items-center space-x-3">
@@ -320,7 +325,7 @@ const Products = () => {
                   className="border-gray-400 data-[state=checked]:bg-[#08C422] data-[state=checked]:border-[#08C422]"
                 />
                 <label htmlFor="out-of-stock" className="text-white text-sm cursor-pointer">
-                  Out of stock (1)
+                  Out of stock ({outOfStockCount})
                 </label>
               </div>
             </div>
